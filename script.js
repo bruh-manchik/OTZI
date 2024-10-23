@@ -5,7 +5,7 @@ function showListCourse(course) {
     document.getElementById('4-course').style.display = course === 4 ? 'block' : 'none';
 }
 function showSchedule(week) {
-    document.getElementById('inb-b-o-24-1').style.display = week === 1 ? 'block' : 'none';
+    document.getElementById('inb-b-o-24-1_1week').style.display = week === 1 ? 'block' : 'none';
     document.getElementById('inb-b-o-24-2').style.display = week === 2 ? 'block' : 'none';
     document.getElementById('inb-b-o-23-1').style.display = week === 3 ? 'block' : 'none';
     document.getElementById('inb-b-o-23-2').style.display = week === 4 ? 'block' : 'none';
