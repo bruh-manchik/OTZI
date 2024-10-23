@@ -9,31 +9,51 @@
 </head>
 <body>
     <h2>Расписание</h2>
+
     <div class="buttons">
         <button class="week-button" onclick="showListCourse(1)">1 Курс</button>
         <button class="week-button" onclick="showListCourse(2)">2 Курс</button>
         <button class="week-button" onclick="showListCourse(3)">3 Курс</button>
         <button class="week-button" onclick="showListCourse(4)">4 Курс</button>
     </div>
+
     <div id="1-course" class="buttons" style="display:none;">
-        <button class="group-button" onclick="showSchedule(1)">ИНБ-б-о-24-1</button>
-        <button class="group-button" onclick="showSchedule(2)">ИНБ-б-о-24-2</button>
-    </div>
-    <div id="2-course" class="buttons" style="display:none;">
-        <button class="group-button" onclick="showSchedule(3)">ИНБ-б-о-23-1</button>
-        <button class="group-button" onclick="showSchedule(4)">ИНБ-б-о-23-2</button>
-        <button class="group-button" onclick="showSchedule(5)">ИНБ-б-о-23-3</button>
-    </div>
-    <div id="3-course" class="buttons" style="display:none;">
-        <button class="group-button" onclick="showSchedule(6)">ИНБ-б-о-22-1</button>
-        <button class="group-button" onclick="showSchedule(7)">ИНБ-б-о-22-2</button>
-        <button class="group-button" onclick="showSchedule(8)">ИНБ-б-о-22-3</button>
-    </div>
-    <div id="4-course" class="buttons" style="display:none;">
-        <button class="group-button" onclick="showSchedule(9)">ИНБ-б-о-21-1</button>
-        <button class="group-button" onclick="showSchedule(10)">ИНБ-б-о-21-2</button>
-        <button class="group-button" onclick="showSchedule(11)">ИНБ-б-о-21-3</button>
-    </div>
+    <button class="group-button" onclick="showWeeks('inb-b-o-24-1')">ИНБ-б-о-24-1</button>
+    <button class="group-button" onclick="showWeeks('inb-b-o-24-2')">ИНБ-б-о-24-2</button>
+</div>
+<div id="2-course" class="buttons" style="display:none;">
+    <button class="group-button" onclick="showWeeks('inb-b-o-23-1')">ИНБ-б-о-23-1</button>
+    <button class="group-button" onclick="showWeeks('inb-b-o-23-2')">ИНБ-б-о-23-2</button>
+    <button class="group-button" onclick="showWeeks('inb-b-o-23-3')">ИНБ-б-о-23-3</button>
+</div>
+<div id="3-course" class="buttons" style="display:none;">
+    <button class="group-button" onclick="showWeeks('inb-b-o-22-1')">ИНБ-б-о-22-1</button>
+    <button class="group-button" onclick="showWeeks('inb-b-o-22-2')">ИНБ-б-о-22-2</button>
+    <button class="group-button" onclick="showWeeks('inb-b-o-22-3')">ИНБ-б-о-22-3</button>
+</div>
+<div id="4-course" class="buttons" style="display:none;">
+    <button class="group-button" onclick="showWeeks('inb-b-o-21-1')">ИНБ-б-о-21-1</button>
+    <button class="group-button" onclick="showWeeks('inb-b-o-21-2')">ИНБ-б-о-21-2</button>
+    <button class="group-button" onclick="showWeeks('inb-b-o-21-3')">ИНБ-б-о-21-3</button>
+</div>
+<div id="weeks-buttons" class="buttons" style="display:none;">
+    <button class="week-button" onclick="showTables('1')">1 неделя</button>
+    <button class="week-button" onclick="showTables('2')">2 неделя</button>
+</div>
+
+
+<!--<div id="courses" class="buttons">-->
+<!--    <button class="course-button" data-course="1">1 Курс</button>-->
+<!--    <button class="course-button" data-course="2">2 Курс</button>-->
+<!--    <button class="course-button" data-course="3">3 Курс</button>-->
+<!--    <button class="course-button" data-course="4">4 Курс</button>-->
+<!--</div>-->
+<!--<div id="groups" class="buttons"></div>-->
+<!--<div id="weeks-buttons" class="buttons" style="display:none;">-->
+<!--    <button class="week-button" data-week="1">1 неделя</button>-->
+<!--    <button class="week-button" data-week="2">2 неделя</button>-->
+<!--</div>-->
+
 
     <div id="inb-b-o-24-1_1week" class="schedule" style="display:none;">
         <h2>ИНБ-б-о-24-1</h2>
@@ -221,7 +241,1838 @@
     </div>
     <div id="inb-b-o-24-1_2week" class="schedule" style="display:none;">
         <h2>ИНБ-б-о-24-1</h2>
+        <h2>2 неделя</h2>
+        <h3>Понедельник</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Аудитория</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Основы российской государственности</td>
+                    <td>Лекция</td>
+                    <td>23-102</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Алгебра</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Философия</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Интенсивный курс русской разговорной речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-413</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Вторник</h3>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Патентоведение</td>
+                    <td>Лекция</td>
+                    <td>23-102</td>
+                    <td>Петренко В.И.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Патентоведение</td>
+                    <td>Практическое занятие</td>
+                    <td>9-314</td>
+                    <td>Петренко В.И.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Среда</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>9-510</td>
+                    <td>Панов А.М.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Физика</td>
+                    <td>Лекция</td>
+                    <td>9-410</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-9-421</td>
+                    <td>Елисеева Ю.В.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Английский язык</td>
+                    <td>Пркатическое занятие</td>
+                    <td>9-509Б</td>
+                    <td>Федюк Д.О.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Проектная деятельность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-323</td>
+                    <td>Антонов В.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Четверг</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Математический анализ</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>22-103</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Пятница</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Персональная кибербезопасность</td>
+                    <td>Лабораторная работа</td>
+                    <td>9-503</td>
+                    <td>Ванина А.Г.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Персональная кибербезопасность</td>
+                    <td>Лекция</td>
+                    <td>9-502</td>
+                    <td>Ванина А.Г.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Правовая и финансовая грамотность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Чомаев А.А.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Суббота</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Физика</td>
+                    <td>Лабораторное занятие</td>
+                    <td>3-108</td>
+                    <td>Еськова И.В.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Физика</td>
+                    <td>Лабораторное занятие</td>
+                    <td>3-108</td>
+                    <td>Еськова И.В.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Физика</td>
+                    <td>Лабораторное занятие</td>
+                    <td>3-108</td>
+                    <td>Еськова И.В.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лабораторное занятие</td>
+                    <td>3-108</td>
+                    <td>Еськова И.В.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="inb-b-o-24-2_1week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-24-2</h2>
         <h2>1 неделя</h2>
+        <h3>Понедельник</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Аудитория</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Алгебра</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Философия</td>
+                    <td>Лекция</td>
+                    <td>22-103</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Философия</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Вторник</h3>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Английский язык для Академических целей</td>
+                    <td>Практическое занятие</td>
+                    <td>9-424</td>
+                    <td>Щербинина О.В.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лекция</td>
+                    <td>9-405</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Лекция</td>
+                    <td>9-310</td>
+                    <td>Огур М.Г.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Среда</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-422</td>
+                    <td>Мазикина М.С.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Интенсивный курс русской разговорной речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-413</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Четверг</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-421</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Пятница</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Персональная кибербезопасность</td>
+                    <td>Лабораторная работа</td>
+                    <td>9-503</td>
+                    <td>Ванина А.Г.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>9-513</td>
+                    <td>Огур М.Г.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Правовая и финансовая граммотность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-509А</td>
+                    <td>Чомаев А.А.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Суббота</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Физическая культура и спорт</td>
+                    <td>Практическое занятие</td>
+                    <td>5-306</td>
+                    <td>Вучев В.Н.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Физика</td>
+                    <td>Лабораторная работа</td>
+                    <td>3-315</td>
+                    <td>Еськова И.В.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лабораторная работа</td>
+                    <td>3-315</td>
+                    <td>Еськова И.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="inb-b-o-24-2_2week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-24-2</h2>
+        <h2>2 неделя</h2>
+        <h3>Понедельник</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Аудитория</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Основы российской государственности</td>
+                    <td>Лекция</td>
+                    <td>23-102</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Алгебра</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Проектная деятельность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-311</td>
+                    <td>Антонов В.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Вторник</h3>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Английский язык для Академических целей</td>
+                    <td>Практическое занятие</td>
+                    <td>9-424</td>
+                    <td>Щербинина О.В.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Патентоведение</td>
+                    <td>Практическое занятие</td>
+                    <td>9-314</td>
+                    <td>Петренко В.И.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Патентоведение</td>
+                    <td>Лекция</td>
+                    <td>23-102</td>
+                    <td>Петренко В.И.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Среда</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Физика</td>
+                    <td>Лекция</td>
+                    <td>9-410</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-422</td>
+                    <td>Мазикина М.С.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>История России</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Труфанова В.М.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Четверг</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-421</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Математический анализ</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>22-509</td>
+                    <td>Огур М.Г</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Пятница</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Интенсивный курс русской речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-413</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Персональная кибербезопасность</td>
+                    <td>Лекция</td>
+                    <td>9-502</td>
+                    <td>Ванина А.Г.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="inb-b-o-23-1_1week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-23-1</h2>
+        <h2>1 неделя</h2>
+        <h3>Понедельник</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Аудитория</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Физическая культура и спорт</td>
+                    <td>Практическое занятие</td>
+                    <td>9-102А</td>
+                    <td>Вучев В.Н.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Алгебра</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Философия</td>
+                    <td>Лекция</td>
+                    <td>22-103</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-402Б</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Вторник</h3>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лекция</td>
+                    <td>9-405</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Лекция</td>
+                    <td>9-310</td>
+                    <td>Огур М.Г.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Среда</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-511</td>
+                    <td>Федюк Д.О.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-421</td>
+                    <td>Елисеева Ю.В.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Персональная кибербезопаснсоть</td>
+                    <td>Лабораторная работа</td>
+                    <td>9-503</td>
+                    <td>Ванина А.Г.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>9-510</td>
+                    <td>Панов А.М.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>История России</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Труфанова В.М.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Четверг</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Интенсивный курс русской разговорной речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-518</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="inb-b-o-23-1_2week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-23-1</h2>
+        <h2>2 неделя</h2>
+        <h3>Понедельник</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Аудитория</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Основы российской государственности</td>
+                    <td>Лекция</td>
+                    <td>23-102</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Алгебра</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Философия</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Интенсивный курс русской разговорной речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-413</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Вторник</h3>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Патентоведение</td>
+                    <td>Лекция</td>
+                    <td>23-102</td>
+                    <td>Петренко В.И.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Патентоведение</td>
+                    <td>Практическое занятие</td>
+                    <td>9-314</td>
+                    <td>Петренко В.И.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Среда</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>9-510</td>
+                    <td>Панов А.М.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Физика</td>
+                    <td>Лекция</td>
+                    <td>9-410</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-9-421</td>
+                    <td>Елисеева Ю.В.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Английский язык</td>
+                    <td>Пркатическое занятие</td>
+                    <td>9-509Б</td>
+                    <td>Федюк Д.О.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Проектная деятельность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-323</td>
+                    <td>Антонов В.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Четверг</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Математический анализ</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>22-103</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Пятница</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Персональная кибербезопасность</td>
+                    <td>Лабораторная работа</td>
+                    <td>9-503</td>
+                    <td>Ванина А.Г.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Персональная кибербезопасность</td>
+                    <td>Лекция</td>
+                    <td>9-502</td>
+                    <td>Ванина А.Г.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Правовая и финансовая грамотность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Чомаев А.А.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Суббота</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Физика</td>
+                    <td>Лабораторное занятие</td>
+                    <td>3-108</td>
+                    <td>Еськова И.В.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Физика</td>
+                    <td>Лабораторное занятие</td>
+                    <td>3-108</td>
+                    <td>Еськова И.В.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Физика</td>
+                    <td>Лабораторное занятие</td>
+                    <td>3-108</td>
+                    <td>Еськова И.В.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лабораторное занятие</td>
+                    <td>3-108</td>
+                    <td>Еськова И.В.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="inb-b-o-23-2_1week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-23-2</h2>
+        <h2>1 неделя</h2>
+        <h3>Понедельник</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Аудитория</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Алгебра</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Философия</td>
+                    <td>Лекция</td>
+                    <td>22-103</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Философия</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Вторник</h3>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Английский язык для Академических целей</td>
+                    <td>Практическое занятие</td>
+                    <td>9-424</td>
+                    <td>Щербинина О.В.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лекция</td>
+                    <td>9-405</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Лекция</td>
+                    <td>9-310</td>
+                    <td>Огур М.Г.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Среда</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-422</td>
+                    <td>Мазикина М.С.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Интенсивный курс русской разговорной речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-413</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Четверг</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-421</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Пятница</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Персональная кибербезопасность</td>
+                    <td>Лабораторная работа</td>
+                    <td>9-503</td>
+                    <td>Ванина А.Г.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>9-513</td>
+                    <td>Огур М.Г.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Правовая и финансовая граммотность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-509А</td>
+                    <td>Чомаев А.А.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Суббота</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Физическая культура и спорт</td>
+                    <td>Практическое занятие</td>
+                    <td>5-306</td>
+                    <td>Вучев В.Н.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Физика</td>
+                    <td>Лабораторная работа</td>
+                    <td>3-315</td>
+                    <td>Еськова И.В.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лабораторная работа</td>
+                    <td>3-315</td>
+                    <td>Еськова И.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="inb-b-o-23-2_2week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-23-2</h2>
+        <h2>2неделя</h2>
+        <h3>Понедельник</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Аудитория</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Основы российской государственности</td>
+                    <td>Лекция</td>
+                    <td>23-102</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Алгебра</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Проектная деятельность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-311</td>
+                    <td>Антонов В.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Вторник</h3>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Английский язык для Академических целей</td>
+                    <td>Практическое занятие</td>
+                    <td>9-424</td>
+                    <td>Щербинина О.В.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Патентоведение</td>
+                    <td>Практическое занятие</td>
+                    <td>9-314</td>
+                    <td>Петренко В.И.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Патентоведение</td>
+                    <td>Лекция</td>
+                    <td>23-102</td>
+                    <td>Петренко В.И.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Среда</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Физика</td>
+                    <td>Лекция</td>
+                    <td>9-410</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-422</td>
+                    <td>Мазикина М.С.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>История России</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Труфанова В.М.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Четверг</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-421</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Математический анализ</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>22-509</td>
+                    <td>Огур М.Г</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Пятница</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Интенсивный курс русской речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-413</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Персональная кибербезопасность</td>
+                    <td>Лекция</td>
+                    <td>9-502</td>
+                    <td>Ванина А.Г.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="inb-b-o-23-3_1week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-23-3</h2>
+        <h2>1 неделя</h2>
+        <h3>Понедельник</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Аудитория</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Физическая культура и спорт</td>
+                    <td>Практическое занятие</td>
+                    <td>9-102А</td>
+                    <td>Вучев В.Н.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Алгебра</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Философия</td>
+                    <td>Лекция</td>
+                    <td>22-103</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-402Б</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Вторник</h3>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лекция</td>
+                    <td>9-405</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Лекция</td>
+                    <td>9-310</td>
+                    <td>Огур М.Г.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Среда</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-511</td>
+                    <td>Федюк Д.О.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-421</td>
+                    <td>Елисеева Ю.В.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Персональная кибербезопаснсоть</td>
+                    <td>Лабораторная работа</td>
+                    <td>9-503</td>
+                    <td>Ванина А.Г.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>9-510</td>
+                    <td>Панов А.М.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>История России</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Труфанова В.М.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Четверг</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Интенсивный курс русской разговорной речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-518</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="inb-b-o-23-3_2week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-23-3</h2>
+        <h2>2 неделя</h2>
         <h3>Понедельник</h3>
         <table border="1">
             <thead>
@@ -498,8 +2349,8 @@
         </table>
     </div>
 
-    <div id="inb-b-o-24-2-1week" class="schedule" style="display:none;">
-        <h2>ИНБ-б-о-24-2</h2>
+    <div id="inb-b-o-22-1_1week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-22-1</h2>
         <h2>1 неделя</h2>
         <h3>Понедельник</h3>
         <table border="1">
@@ -736,9 +2587,924 @@
             </tbody>
         </table>
     </div>
-    <div id="inb-b-o-24-2-2week" class="schedule" style="display:none;">
-        <h2>ИНБ-б-о-24-2</h2>
+    <div id="inb-b-o-22-1_2week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-22-1</h2>
+        <h2>2 неделя</h2>
+        <h3>Понедельник</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Аудитория</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Основы российской государственности</td>
+                    <td>Лекция</td>
+                    <td>23-102</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Алгебра</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Проектная деятельность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-311</td>
+                    <td>Антонов В.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Вторник</h3>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Английский язык для Академических целей</td>
+                    <td>Практическое занятие</td>
+                    <td>9-424</td>
+                    <td>Щербинина О.В.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Патентоведение</td>
+                    <td>Практическое занятие</td>
+                    <td>9-314</td>
+                    <td>Петренко В.И.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Патентоведение</td>
+                    <td>Лекция</td>
+                    <td>23-102</td>
+                    <td>Петренко В.И.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Среда</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Физика</td>
+                    <td>Лекция</td>
+                    <td>9-410</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-422</td>
+                    <td>Мазикина М.С.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>История России</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Труфанова В.М.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Четверг</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-421</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Математический анализ</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>22-509</td>
+                    <td>Огур М.Г</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Пятница</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Интенсивный курс русской речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-413</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Персональная кибербезопасность</td>
+                    <td>Лекция</td>
+                    <td>9-502</td>
+                    <td>Ванина А.Г.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="inb-b-o-22-2_1week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-22-2</h2>
         <h2>1 неделя</h2>
+        <h3>Понедельник</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Аудитория</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Физическая культура и спорт</td>
+                    <td>Практическое занятие</td>
+                    <td>9-102А</td>
+                    <td>Вучев В.Н.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Алгебра</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Философия</td>
+                    <td>Лекция</td>
+                    <td>22-103</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-402Б</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Вторник</h3>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лекция</td>
+                    <td>9-405</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Лекция</td>
+                    <td>9-310</td>
+                    <td>Огур М.Г.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Среда</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-511</td>
+                    <td>Федюк Д.О.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-421</td>
+                    <td>Елисеева Ю.В.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Персональная кибербезопаснсоть</td>
+                    <td>Лабораторная работа</td>
+                    <td>9-503</td>
+                    <td>Ванина А.Г.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>9-510</td>
+                    <td>Панов А.М.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>История России</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Труфанова В.М.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Четверг</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Интенсивный курс русской разговорной речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-518</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="inb-b-o-22-2_2week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-22-2</h2>
+        <h2>2 неделя</h2>
+        <h3>Понедельник</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Аудитория</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Основы российской государственности</td>
+                    <td>Лекция</td>
+                    <td>23-102</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Алгебра</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Философия</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Интенсивный курс русской разговорной речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-413</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Вторник</h3>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Патентоведение</td>
+                    <td>Лекция</td>
+                    <td>23-102</td>
+                    <td>Петренко В.И.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Патентоведение</td>
+                    <td>Практическое занятие</td>
+                    <td>9-314</td>
+                    <td>Петренко В.И.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Среда</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>9-510</td>
+                    <td>Панов А.М.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Физика</td>
+                    <td>Лекция</td>
+                    <td>9-410</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-9-421</td>
+                    <td>Елисеева Ю.В.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Английский язык</td>
+                    <td>Пркатическое занятие</td>
+                    <td>9-509Б</td>
+                    <td>Федюк Д.О.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Проектная деятельность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-323</td>
+                    <td>Антонов В.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Четверг</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Математический анализ</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>22-103</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Пятница</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Персональная кибербезопасность</td>
+                    <td>Лабораторная работа</td>
+                    <td>9-503</td>
+                    <td>Ванина А.Г.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Персональная кибербезопасность</td>
+                    <td>Лекция</td>
+                    <td>9-502</td>
+                    <td>Ванина А.Г.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Правовая и финансовая грамотность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Чомаев А.А.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Суббота</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Физика</td>
+                    <td>Лабораторное занятие</td>
+                    <td>3-108</td>
+                    <td>Еськова И.В.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Физика</td>
+                    <td>Лабораторное занятие</td>
+                    <td>3-108</td>
+                    <td>Еськова И.В.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Физика</td>
+                    <td>Лабораторное занятие</td>
+                    <td>3-108</td>
+                    <td>Еськова И.В.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лабораторное занятие</td>
+                    <td>3-108</td>
+                    <td>Еськова И.В.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="inb-b-o-22-3_1week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-22-3</h2>
+        <h2>1 неделя</h2>
+        <h3>Понедельник</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Аудитория</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Алгебра</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Философия</td>
+                    <td>Лекция</td>
+                    <td>22-103</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Философия</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Вторник</h3>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Английский язык для Академических целей</td>
+                    <td>Практическое занятие</td>
+                    <td>9-424</td>
+                    <td>Щербинина О.В.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лекция</td>
+                    <td>9-405</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Лекция</td>
+                    <td>9-310</td>
+                    <td>Огур М.Г.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Среда</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-422</td>
+                    <td>Мазикина М.С.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Интенсивный курс русской разговорной речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-413</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Четверг</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-421</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Пятница</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Персональная кибербезопасность</td>
+                    <td>Лабораторная работа</td>
+                    <td>9-503</td>
+                    <td>Ванина А.Г.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>9-513</td>
+                    <td>Огур М.Г.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Правовая и финансовая граммотность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-509А</td>
+                    <td>Чомаев А.А.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Суббота</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Физическая культура и спорт</td>
+                    <td>Практическое занятие</td>
+                    <td>5-306</td>
+                    <td>Вучев В.Н.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Физика</td>
+                    <td>Лабораторная работа</td>
+                    <td>3-315</td>
+                    <td>Еськова И.В.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лабораторная работа</td>
+                    <td>3-315</td>
+                    <td>Еськова И.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="inb-b-o-22-3_2week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-22-3</h2>
+        <h2>2 неделя</h2>
         <h3>Понедельник</h3>
         <table border="1">
             <thead>
@@ -952,9 +3718,247 @@
         </table>
     </div>
 
-    <div id="inb-b-o-23-1-1week" class="schedule" style="display:none;">
-        <h2>ИНБ-б-о-24-2</h2>
+    <div id="inb-b-o-21-1_1week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-21-1</h2>
         <h2>1 неделя</h2>
+        <h3>Понедельник</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Аудитория</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Алгебра</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Философия</td>
+                    <td>Лекция</td>
+                    <td>22-103</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Философия</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Вторник</h3>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Английский язык для Академических целей</td>
+                    <td>Практическое занятие</td>
+                    <td>9-424</td>
+                    <td>Щербинина О.В.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лекция</td>
+                    <td>9-405</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Лекция</td>
+                    <td>9-310</td>
+                    <td>Огур М.Г.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Среда</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-422</td>
+                    <td>Мазикина М.С.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Интенсивный курс русской разговорной речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-413</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Четверг</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-421</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Пятница</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>4</td>
+                    <td>Персональная кибербезопасность</td>
+                    <td>Лабораторная работа</td>
+                    <td>9-503</td>
+                    <td>Ванина А.Г.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>9-513</td>
+                    <td>Огур М.Г.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Правовая и финансовая граммотность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-509А</td>
+                    <td>Чомаев А.А.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Суббота</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Тип занятия</th>
+                    <th>Кабинет</th>
+                    <th>Преподаватель</th>
+                    <th>Примечание</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Физическая культура и спорт</td>
+                    <td>Практическое занятие</td>
+                    <td>5-306</td>
+                    <td>Вучев В.Н.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Физика</td>
+                    <td>Лабораторная работа</td>
+                    <td>3-315</td>
+                    <td>Еськова И.В.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лабораторная работа</td>
+                    <td>3-315</td>
+                    <td>Еськова И.В.</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="inb-b-o-21-1_2week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-21-1</h2>
+        <h2>2 неделя</h2>
         <h3>Понедельник</h3>
         <table border="1">
             <thead>
@@ -1167,9 +4171,9 @@
             </tbody>
         </table>
     </div>
-
-    <div id="inb-b-o-23-2" class="schedule" style="display:none;">
-    <h2>ИНБ-б-о-23-2</h2>
+    <div id="inb-b-o-21-2_1week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-21-2</h2>
+        <h2>1 неделя</h2>
         <h3>Понедельник</h3>
         <table border="1">
             <thead>
@@ -1177,31 +4181,43 @@
                     <th>№</th>
                     <th>Предмет</th>
                     <th>Тип занятия</th>
-                    <th>Кабинет</th>
+                    <th>Аудитория</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
                     <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
+                    <td>Физическая культура и спорт</td>
+                    <td>Практическое занятие</td>
+                    <td>9-102А</td>
+                    <td>Вучев В.Н.</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>Алгебра</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Философия</td>
+                    <td>Лекция</td>
+                    <td>22-103</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-402Б</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1214,29 +4230,33 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
+                    <td>4</td>
                     <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
+                    <td>Лекция</td>
+                    <td>9-405</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Лекция</td>
+                    <td>9-310</td>
+                    <td>Огур М.Г.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1249,29 +4269,49 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
                     <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-511</td>
+                    <td>Федюк Д.О.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-421</td>
+                    <td>Елисеева Ю.В.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Персональная кибербезопаснсоть</td>
+                    <td>Лабораторная работа</td>
+                    <td>9-503</td>
+                    <td>Ванина А.Г.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>9-510</td>
+                    <td>Панов А.М.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>История России</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Труфанова В.М.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1284,107 +4324,40 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
                     <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Интенсивный курс русской разговорной речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-518</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
-        <h3>Пятница</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Суббота</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-
     </div>
-
-    <div id="inb-b-o-23-3" class="schedule" style="display:none;">
-    <h2>ИНБ-б-о-23-3</h2>
+    <div id="inb-b-o-21-2_2week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-21-2</h2>
+        <h2>2 неделя</h2>
         <h3>Понедельник</h3>
         <table border="1">
             <thead>
@@ -1392,31 +4365,43 @@
                     <th>№</th>
                     <th>Предмет</th>
                     <th>Тип занятия</th>
-                    <th>Кабинет</th>
+                    <th>Аудитория</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
                     <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
+                    <td>Основы российской государственности</td>
+                    <td>Лекция</td>
+                    <td>23-102</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>Алгебра</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Философия</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Интенсивный курс русской разговорной речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-413</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1429,29 +4414,33 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
+                    <td>4</td>
                     <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Патентоведение</td>
                     <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
+                    <td>23-102</td>
+                    <td>Петренко В.И.</td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>6</td>
+                    <td>Патентоведение</td>
+                    <td>Практическое занятие</td>
+                    <td>9-314</td>
+                    <td>Петренко В.И.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1464,29 +4453,49 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
                     <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>9-510</td>
+                    <td>Панов А.М.</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>Физика</td>
+                    <td>Лекция</td>
+                    <td>9-410</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-9-421</td>
+                    <td>Елисеева Ю.В.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Английский язык</td>
+                    <td>Пркатическое занятие</td>
+                    <td>9-509Б</td>
+                    <td>Федюк Д.О.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Проектная деятельность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-323</td>
+                    <td>Антонов В.В.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1499,29 +4508,41 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
                     <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>Математический анализ</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>22-103</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1534,29 +4555,33 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
+                    <td>4</td>
+                    <td>Персональная кибербезопасность</td>
+                    <td>Лабораторная работа</td>
+                    <td>9-503</td>
+                    <td>Ванина А.Г.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Персональная кибербезопасность</td>
                     <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
+                    <td>9-502</td>
+                    <td>Ванина А.Г.</td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>6</td>
+                    <td>Правовая и финансовая грамотность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Чомаев А.А.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1569,37 +4594,48 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
+                    <td>Физика</td>
+                    <td>Лабораторное занятие</td>
+                    <td>3-108</td>
+                    <td>Еськова И.В.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
+                    <td>Лабораторное занятие</td>
+                    <td>3-108</td>
+                    <td>Еськова И.В.</td>
+                    <td>ИНБ-б-о-24-1(1)</td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>Физика</td>
+                    <td>Лабораторное занятие</td>
+                    <td>3-108</td>
+                    <td>Еськова И.В.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лабораторное занятие</td>
+                    <td>3-108</td>
+                    <td>Еськова И.В.</td>
+                    <td>ИНБ-б-о-24-1(2)</td>
                 </tr>
             </tbody>
         </table>
-
     </div>
-
-    <div id="inb-b-o-22-1" class="schedule" style="display:none;">
-    <h2>ИНБ-б-о-22-1</h2>
+    <div id="inb-b-o-21-3_1week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-21-3</h2>
+        <h2>1 неделя</h2>
         <h3>Понедельник</h3>
         <table border="1">
             <thead>
@@ -1607,31 +4643,35 @@
                     <th>№</th>
                     <th>Предмет</th>
                     <th>Тип занятия</th>
-                    <th>Кабинет</th>
+                    <th>Аудитория</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
+                    <td>3</td>
                     <td>Алгебра</td>
                     <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
+                    <td>4</td>
+                    <td>Философия</td>
+                    <td>Лекция</td>
+                    <td>22-103</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>5</td>
+                    <td>Философия</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519</td>
+                    <td>Бакланова О.А.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1644,29 +4684,41 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
                     <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
+                    <td>Английский язык для Академических целей</td>
+                    <td>Практическое занятие</td>
+                    <td>9-424</td>
+                    <td>Щербинина О.В.</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лекция</td>
+                    <td>9-405</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Лекция</td>
+                    <td>9-310</td>
+                    <td>Огур М.Г.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1679,29 +4731,33 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
                     <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-422</td>
+                    <td>Мазикина М.С.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Интенсивный курс русской разговорной речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-413</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1714,29 +4770,25 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
                     <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-421</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1749,29 +4801,33 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
+                    <td>4</td>
+                    <td>Персональная кибербезопасность</td>
+                    <td>Лабораторная работа</td>
+                    <td>9-503</td>
+                    <td>Ванина А.Г.</td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>9-513</td>
+                    <td>Огур М.Г.</td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>6</td>
+                    <td>Правовая и финансовая граммотность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-509А</td>
+                    <td>Чомаев А.А.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1784,37 +4840,40 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
                     <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
+                    <td>Физическая культура и спорт</td>
+                    <td>Практическое занятие</td>
+                    <td>5-306</td>
+                    <td>Вучев В.Н.</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>Физика</td>
+                    <td>Лабораторная работа</td>
+                    <td>3-315</td>
+                    <td>Еськова И.В.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Физика</td>
+                    <td>Лабораторная работа</td>
+                    <td>3-315</td>
+                    <td>Еськова И.В.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
-
     </div>
-
-    <div id="inb-b-o-22-2" class="schedule" style="display:none;">
-    <h2>ИНБ-б-о-22-2</h2>
+    <div id="inb-b-o-21-3_2week" class="schedule" style="display:none;">
+        <h2>ИНБ-б-о-21-3</h2>
+        <h2>2 неделя</h2>
         <h3>Понедельник</h3>
         <table border="1">
             <thead>
@@ -1822,31 +4881,35 @@
                     <th>№</th>
                     <th>Предмет</th>
                     <th>Тип занятия</th>
-                    <th>Кабинет</th>
+                    <th>Аудитория</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
                     <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
+                    <td>Основы российской государственности</td>
+                    <td>Лекция</td>
+                    <td>23-102</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>Алгебра</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Даржания А.Д.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Проектная деятельность</td>
+                    <td>Практическое занятие</td>
+                    <td>9-311</td>
+                    <td>Антонов В.В.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1859,29 +4922,41 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
                     <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
+                    <td>Английский язык для Академических целей</td>
+                    <td>Практическое занятие</td>
+                    <td>9-424</td>
+                    <td>Щербинина О.В.</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>Математический анализ</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Патентоведение</td>
+                    <td>Практическое занятие</td>
+                    <td>9-314</td>
+                    <td>Петренко В.И.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Патентоведение</td>
+                    <td>Лекция</td>
+                    <td>23-102</td>
+                    <td>Петренко В.И.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1894,29 +4969,41 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
                     <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>Физика</td>
+                    <td>Лекция</td>
+                    <td>9-410</td>
+                    <td>Мартенс В.Я.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Алгебра</td>
+                    <td>Практическое занятие</td>
+                    <td>9-112</td>
+                    <td>Мамиконян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Английский язык</td>
+                    <td>Практическое занятие</td>
+                    <td>9-422</td>
+                    <td>Мазикина М.С.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>История России</td>
+                    <td>Практическое занятие</td>
+                    <td>9-519А</td>
+                    <td>Труфанова В.М.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1929,29 +5016,41 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
                     <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
+                    <td>Основы российской государственности</td>
+                    <td>Практическое занятие</td>
+                    <td>9-421</td>
+                    <td>Попов М.Е.</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>Математический анализ</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Тимофеева Е.Ф.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>История России</td>
+                    <td>Лекция</td>
+                    <td>9-102</td>
+                    <td>Амбарцумян К.Р.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Информационные технологии и программирование</td>
+                    <td>Практическое занятие</td>
+                    <td>22-509</td>
+                    <td>Огур М.Г</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -1964,928 +5063,28 @@
                     <th>Тип занятия</th>
                     <th>Кабинет</th>
                     <th>Преподаватель</th>
+                    <th>Примечание</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
+                    <td>4</td>
+                    <td>Интенсивный курс русской речи и грамматики</td>
+                    <td>Практическое занятие</td>
+                    <td>9-413</td>
+                    <td>Гусаренко С.В.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Персональная кибербезопасность</td>
                     <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
+                    <td>9-502</td>
+                    <td>Ванина А.Г.</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
-        <h3>Суббота</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
-
-    <div id="inb-b-o-22-3" class="schedule" style="display:none;">
-    <h2>ИНБ-б-о-22-3</h2>
-        <h3>Понедельник</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Вторник</h3>
-        <table border="2">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Среда</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Четверг</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Пятница</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Суббота</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
-
-    <div id="inb-b-o-21-1" class="schedule" style="display:none;">
-    <h2>ИНБ-б-о-21-1</h2>
-        <h3>Понедельник</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Вторник</h3>
-        <table border="2">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Среда</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Четверг</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Пятница</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Суббота</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
-
-    <div id="inb-b-o-21-2" class="schedule" style="display:none;">
-    <h2>ИНБ-б-о-21-2</h2>
-        <h3>Понедельник</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Вторник</h3>
-        <table border="2">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Среда</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Четверг</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Пятница</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Суббота</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
-
-    <div id="inb-b-o-21-3" class="schedule" style="display:none;">
-    <h2>ИНБ-б-о-21-3</h2>
-        <h3>Понедельник</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Вторник</h3>
-        <table border="2">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Среда</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Четверг</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Пятница</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-        <h3>Суббота</h3>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Предмет</th>
-                    <th>Тип занятия</th>
-                    <th>Кабинет</th>
-                    <th>Преподаватель</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Алгебра</td>
-                    <td>Лекция</td>
-                    <td>9-112</td>
-                    <td>Иванов И.И.</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Физика</td>
-                    <td>Практика</td>
-                    <td>9-423</td>
-                    <td>Мартенс П.П.</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Химия</td>
-                    <td>Лабораторная</td>
-                    <td>303</td>
-                    <td>Сидоров С.С.</td>
-                </tr>
-            </tbody>
-        </table>
-
     </div>
 
     <script src="script.js"></script>
